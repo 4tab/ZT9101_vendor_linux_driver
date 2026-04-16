@@ -2257,8 +2257,11 @@ exit:
     return ret;
 }
 
-
-static zt_s32 _set_wiphy_params(struct wiphy *wiphy, zt_u32 changed)
+static zt_s32 _set_wiphy_params(struct wiphy *wiphy,
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 17, 0))
+		zt_s32 radio_idx,
+#endif
+		zt_u32 changed)
 {
     CFG80211_DBG();
 
@@ -2877,6 +2880,9 @@ static zt_s32 _leave_ibss_cb(struct wiphy *wiphy, struct net_device *ndev)
 static zt_s32 _call_set_txpower(struct wiphy *wiphy,
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 8, 0))
                                 struct wireless_dev *wdev,
+#endif
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(6, 17, 0))
+				zt_s32 radio_idx,
 #endif
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 36)) || defined(COMPAT_KERNEL_RELEASE)
                                 enum nl80211_tx_power_setting type, zt_s32 mbm)
