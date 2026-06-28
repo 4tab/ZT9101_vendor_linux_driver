@@ -1,0 +1,122 @@
+work_mode=sta
+
+work_mode:
+auto → ZT_AUTO_MODE
+sta → ZT_INFRA_MODE
+ap → ZT_MASTER_MODE
+repeat → ZT_REPEAT_MODE
+monitor → ZT_MONITOR_MODE (if enabled)
+mesh → ZT_MESH_MODE
+second → ZT_SECOND_MODES
+adhoc → ZT_ADHOC_MODE (if enabled)
+
+channel=1
+
+channel:
+1–13 (depends on regulatory domain / channel_plan)
+
+bw=20M
+
+bw:
+20M = 20 MHz
+40M = 40 MHz
+
+channel_plan=china
+
+channel_plan:
+china / us / eu / global (or numeric depending build)
+
+rf_power=H
+
+rf_power:
+L = low power
+M = medium power
+H = high power
+maps to E_RADIO_POWER_LEVEL_L/M/H
+
+ssid=ZTOP-AP
+
+ssid:
+used in AP / ADHOC / REPEAT / MESH modes
+ignored in STA mode
+
+scan_ch_to=50
+
+scan_ch_to:
+scan channel dwell timeout (ms)
+
+scan_prb_times=3
+
+scan_prb_times:
+number of probe retries per channel
+
+scan_que_deep=64
+
+scan_que_deep:
+scan queue size depth
+
+scan_que_node_ttl=20
+
+scan_que_node_ttl:
+scan result lifetime (TTL)
+
+ars_policy=0
+
+ars_policy:
+0 = auto rate selection default
+range: 0 to 7
+
+max_ampdu_len_ulimit=3
+
+max_ampdu_len_ulimit:
+AMPDU TX aggregation limit
+range typically 0–7 (driver dependent scaling)
+
+ba_enable_tx=1
+
+ba_enable_tx:
+0 = disable TX block ack aggregation
+1 = enable TX aggregation
+
+ba_enable_rx=1
+
+ba_enable_rx:
+0 = disable RX aggregation
+1 = enable RX aggregation
+
+wlan_guard=1
+
+wlan_guard:
+0 = off
+1 = on (protects WLAN timing / coexistence behavior)
+
+vco_cur=31
+
+vco_cur:
+RF calibration parameter (0x00–0xFF typical range)
+
+sdio_clk_pwr_save=0
+
+sdio_clk_pwr_save:
+0 = disable SDIO clock power saving
+1 = enable SDIO clock power saving
+
+fw=./fw/ZT9101_fw_xxx.bin
+
+fw:
+firmware for driver_flag = 0 (XV20 path)
+
+fw1=./fw/ZT9101V30_fw_xxx.bin
+
+fw1:
+firmware for driver_flag = 1 (XV30 path)
+BOTH firmware blobs are loaded, selection happens in driver
+
+NOTES:
+
+work_mode selects full NIC operating mode (STA/AP/etc)
+rf_power only defines requested power level; actual TX power depends on firmware + calibration
+fw and fw1 are both loaded; driver_flag selects which is active
+missing values fall back to default_cfg in driver (usually STA, channel 1, RF power H)
+cfg parsing is done in os/linux/hif/cfg_parse.c
+final behavior depends on zt_local_cfg_set_default() and MCU commands
