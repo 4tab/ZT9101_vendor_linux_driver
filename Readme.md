@@ -1,6 +1,6 @@
 ### ZTop ZT9101 vendor wireless driver, powertable modded...
 
-Disclaimer: I am not liable for anything that might result in issues related to the usage of this driver. Use at your own discretion
+## Disclaimer: I am not liable for anything that might result in issues related to the usage of this driver. Use at your own discretion
 
 # Vanilla driver by: https://github.com/yjun123/ZT9101_vendor_linux_driver (uses ASU dns kinda slow) 
 
@@ -20,12 +20,12 @@ ubuntu 24 lts
 #                   a file should open afterwards choose your config settings but keep the blacklisted driver commented 
 #
 ## changes:
-#    prefered net rate ars_policy,(takes some time to adjust but best within 8 meter disatance)
+#    prefered net rate ars_policy,(takes some time to adjust but best within 8 meter distance)
 #    default dns resolver = 1.0.0.1 udhcp in script folder
 #    powertables (binaries are encypted but there has been some improvement)
 #    default Country Code = GL(GLOBAL?) from 12(CN) . grep -rn 0x58 should show 0x58 =CN or (similar) if not try 0x03), unzoned power table may have been removed
 #    operating channel (use a wifi analyser to find the best one for your situation) (channel 1, and 6 are usually a golden rule @ BW40)
-#    Notes.txt a rundown of changes available in wifi.cmd 
+#    Notes.txt a rundown of changes available in wifi.cfg 
 #
 #
 #          
