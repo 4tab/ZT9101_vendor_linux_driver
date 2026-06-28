@@ -2,7 +2,7 @@
 
 Disclaimer: I am not liable for anything that might result in issues related to the usage of this driver. Use at your own discretion
 
-# Vanilla driver by: https://github.com/yjun123/ZT9101_vendor_linux_driver(uses ASU dns kinda slow) 
+# Vanilla driver by: https://github.com/yjun123/ZT9101_vendor_linux_driver (uses ASU dns kinda slow) 
 
 # This driver has been adopted for Linux kernel version 6.19, but it has not been tested yet.
 Currently working: linux-headers-6.17.0-20-generic/   linux-hwe-6.17-headers-6.17.0-20/                                   
