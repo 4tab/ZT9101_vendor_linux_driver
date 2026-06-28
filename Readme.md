@@ -36,4 +36,4 @@ ubuntu 24 lts
 #       unload driver:
 #          sudo rmmod zt9101_ztopmac_usb.ko
 
-Major Shoutout to yjun123 and the devs worling on the linux kernels
+### Major Shoutout to yjun123 and the devs working on the linux kernels
