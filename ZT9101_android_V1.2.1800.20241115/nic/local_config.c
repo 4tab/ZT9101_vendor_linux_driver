@@ -42,7 +42,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #ifdef CFG_ENABLE_ADHOC_MODE
@@ -68,7 +68,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #endif
@@ -91,7 +91,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #ifdef CFG_ENABLE_AP_MODE
@@ -115,7 +115,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #endif
@@ -141,7 +141,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
     [ZT_SECOND_MODES] =
@@ -166,7 +166,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #ifdef CFG_ENABLE_MONITOR_MODE
@@ -186,7 +186,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 #endif
@@ -209,7 +209,7 @@ static local_info_st default_cfg[ZT_MODE_MAX] =
         .ars_policy = 0,
         .max_ampdu_len_ulimit = 3,
         .wlan_guard = 1,
-        .rf_power = E_RADIO_POWER_LEVEL_M,
+        .rf_power = E_RADIO_POWER_LEVEL_H,
         .vco_cur = 0xFF,
     },
 
