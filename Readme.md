@@ -35,3 +35,5 @@ ubuntu 24 lts
 #          sudo insmod ./zt9101_ztopmac_usb.ko cfg=./wifi.cfg (for autoinstall on login gpt it but make sure it waits for a full login session and awaits user input from terminal, there are ways to bypass but boot times change and bugs ofc)
 #       unload driver:
 #          sudo rmmod zt9101_ztopmac_usb.ko
+
+Major Shoutout to yjun123 and the devs worling on the linux kernels
