@@ -27,6 +27,7 @@ ubuntu 24 lts
 #    operating channel (use a wifi analyser to find the best one for your situation) (channel 1, and 6 are usually a golden rule @ BW40)
 #    Notes.txt a rundown of changes available in wifi.cmd 
 #
+#
 #          
 
                
